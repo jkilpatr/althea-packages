@@ -9,10 +9,10 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=althea-rust-binaries
 PKG_VERSION:=0.2
-PKG_RELEASE:=0
+PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=http://github.com/althea-mesh/althea_rs
+PKG_SOURCE_URL:=https://github.com/althea-mesh/althea_rs
 PKG_SOURCE_VERSION:=pre-0.1.0
 PKG_LICENSE:=Apache-2.0
 
@@ -59,7 +59,7 @@ RUST_BIN_PATHS:=$(foreach filename, $(RUST_BIN_FILENAMES), $(PKG_BUILD_DIR)/targ
 
 define Build/Compile
 	(\
-		cd $(PKG_BUILD_DIR) && \
+		cd $(PKG_BUILD_DIR) && cargo clean &&\
 \
 		OPENSSL_DIR=$(STAGING_DIR)/usr/ \
 		RUSTFLAGS="-C linker=$(TARGET_CC_NOCACHE) -C ar=$(TARGET_AR)" \
