@@ -13,8 +13,8 @@ PKG_VERSION:=0.3.13
 PKG_RELEASE:=0
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/althea-mesh/althea_rs
-PKG_SOURCE_VERSION:=master
+PKG_SOURCE_URL:=https://github.com/jkilpatr/althea_rs
+PKG_SOURCE_VERSION:=borked-enforcement
 PKG_LICENSE:=Apache-2.0
 
 include $(INCLUDE_DIR)/package.mk
